@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to the Quiz</h1>
+    <form id="user-form">
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <select id="stream" required>
+        <option value="">Select Stream</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="Bcom">Bcom</option>
+      </select>
+
+      <select id="level" required>
+        <option value="">Select Level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="expert">Expert</option>
+      </select>
+
+      <button type="submit">Start Quiz</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("user-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const userData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        stream: document.getElementById("stream").value,
+        level: document.getElementById("level").value
+      };
+
+      localStorage.setItem("userData", JSON.stringify(userData));
+      window.location.href = "quiz.html";
+    });
+  </script>
+</body>
+</html>

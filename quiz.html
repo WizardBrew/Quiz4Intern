@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="quiz-container" id="quiz-container">
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h2>Ready to Start the Quiz?</h2>
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box" class="hidden">
+      <div class="question-header">
+        <h2 id="question-number">Question 1 of 10</h2>
+        <div id="timer">Time: 00:00</div>
+      </div>
+      <h3 id="question-text">Question text here</h3>
+      <div id="options" class="options-container"></div>
+      <button id="next-btn" class="btn hidden">Next</button>
+    </div>
+
+    <!-- Result Box -->
+    <div id="result-box" class="hidden">
+      <h2>Quiz Result</h2>
+      <p><strong>Name:</strong> <span id="user-name"></span></p>
+      <p><strong>Email:</strong> <span id="user-email"></span></p>
+      <p><strong>Stream:</strong> <span id="user-stream"></span></p>
+      <p><strong>Level:</strong> <span id="user-level"></span></p>
+      <p><strong>Score:</strong> <span id="user-score"></span>/10</p>
+
+      <div id="wrong-answers">
+        <h3>Incorrect Answers:</h3>
+        <select id="wrong-list" size="5" style="width: 100%;"></select>
+      </div>
+
+      <div id="recommendations">
+        <h3>Recommended Projects:</h3>
+        <ul id="project-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="question_bank.js"></script>
+  <script src="project_bank.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
