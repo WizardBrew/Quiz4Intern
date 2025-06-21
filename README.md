@@ -28,7 +28,6 @@ A multi-page **quiz application** built using **HTML, CSS, and JavaScript**, des
 
 
 
-
 2️⃣ **Start the Quiz**  
    - The system presents **10 random questions**  
    - Answer each question carefully
@@ -58,6 +57,6 @@ Each section will include **six images** for enhanced visualization.
 - **CSS** 🎨
 - **JavaScript** ⚡
 
----
+--- 
 
 ### 🎉 Ready to boost your skills? Let's get started!
